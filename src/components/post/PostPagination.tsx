@@ -1,14 +1,14 @@
 import Link from "next/link";
 import { getTotalPages } from "@/lib/utils/pagination";
 
-type ProductPaginationProps = {
+type PostPaginationProps = {
   currentPage: number;
   total: number;
   limit: number;
   query?: Record<string, string | undefined>;
 };
 
-function buildProductsHref(
+function buildPostsHref(
   page: number,
   query: Record<string, string | undefined> = {},
 ) {
@@ -27,15 +27,15 @@ function buildProductsHref(
   }
 
   const queryString = params.toString();
-  return queryString ? `/products?${queryString}` : "/products";
+  return queryString ? `/posts?${queryString}` : "/posts";
 }
 
-export function ProductPagination({
+export function PostPagination({
   currentPage,
   total,
   limit,
   query,
-}: ProductPaginationProps) {
+}: PostPaginationProps) {
   const totalPages = getTotalPages(total, limit);
   const isFirstPage = currentPage <= 1;
   const isLastPage = currentPage >= totalPages;
@@ -46,34 +46,34 @@ export function ProductPagination({
 
   return (
     <nav
-      aria-label="Product pagination"
-      className="flex flex-col gap-3 rounded-md border border-emerald-100 bg-white p-4 sm:flex-row sm:items-center sm:justify-between"
+      aria-label="Post pagination"
+      className="flex flex-col gap-3 rounded-md border border-slate-200 bg-white p-4 sm:flex-row sm:items-center sm:justify-between"
     >
-      <p className="text-sm font-semibold text-emerald-800">
+      <p className="text-sm text-slate-600">
         Page {currentPage} of {totalPages}
       </p>
       <div className="flex items-center gap-2">
         {isFirstPage ? (
-          <span className="rounded-md border border-emerald-100 px-3 py-2 text-sm text-emerald-700/40">
+          <span className="rounded-md border border-slate-200 px-3 py-2 text-sm text-slate-400">
             Previous
           </span>
         ) : (
           <Link
-            href={buildProductsHref(currentPage - 1, query)}
-            className="rounded-md border border-emerald-200 px-3 py-2 text-sm font-semibold text-emerald-800 transition duration-200 hover:bg-emerald-50"
+            href={buildPostsHref(currentPage - 1, query)}
+            className="rounded-md border border-slate-300 px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50"
           >
             Previous
           </Link>
         )}
 
         {isLastPage ? (
-          <span className="rounded-md border border-emerald-100 px-3 py-2 text-sm text-emerald-700/40">
+          <span className="rounded-md border border-slate-200 px-3 py-2 text-sm text-slate-400">
             Next
           </span>
         ) : (
           <Link
-            href={buildProductsHref(currentPage + 1, query)}
-            className="rounded-md bg-emerald-700 px-3 py-2 text-sm font-semibold text-white transition duration-200 hover:bg-emerald-800"
+            href={buildPostsHref(currentPage + 1, query)}
+            className="rounded-md border border-slate-300 px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50"
           >
             Next
           </Link>

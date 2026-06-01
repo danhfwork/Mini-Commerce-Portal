@@ -16,11 +16,17 @@ export function Header() {
   }
 
   return (
-    <header className="border-b border-slate-200 bg-white">
+    <header className="sticky top-0 z-30 border-b border-emerald-100 bg-white/95 backdrop-blur">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-4 py-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
         <div className="flex items-center justify-between gap-4">
-          <Link href="/products" className="text-lg font-semibold">
-            Mini Commerce Portal
+          <Link
+            href="/products"
+            className="inline-flex items-center gap-2 text-lg font-extrabold text-emerald-950"
+          >
+            <span className="flex h-9 w-9 items-center justify-center rounded-md bg-emerald-600 text-sm font-black text-white">
+              MC
+            </span>
+            <span>Mini Commerce</span>
           </Link>
           <AuthAction
             isHydrated={isHydrated}
@@ -39,27 +45,33 @@ export function Header() {
             name="q"
             type="search"
             placeholder="Search products"
-            className="h-10 w-full rounded-md border border-slate-300 bg-white px-3 text-sm outline-none transition focus:border-slate-500 focus:ring-2 focus:ring-slate-200"
+            className="h-11 w-full rounded-md border border-emerald-200 bg-emerald-50/60 px-4 text-sm text-emerald-950 outline-none transition duration-200 placeholder:text-emerald-800/50 focus:border-emerald-600 focus:bg-white focus:ring-2 focus:ring-emerald-100"
           />
         </form>
 
         <nav className="flex items-center gap-2 text-sm font-medium">
           <Link
             href="/products"
-            className="rounded-md px-3 py-2 text-slate-700 transition hover:bg-slate-100 hover:text-slate-950"
+            className="rounded-md px-3 py-2 text-emerald-800 transition duration-200 hover:bg-emerald-50 hover:text-emerald-950"
           >
             Products
           </Link>
           <Link
+            href="/posts"
+            className="rounded-md px-3 py-2 text-emerald-800 transition duration-200 hover:bg-emerald-50 hover:text-emerald-950"
+          >
+            Posts
+          </Link>
+          <Link
             href="/cart"
-            className="rounded-md px-3 py-2 text-slate-700 transition hover:bg-slate-100 hover:text-slate-950"
+            className="rounded-md bg-orange-500 px-3 py-2 text-white transition duration-200 hover:bg-orange-600"
           >
             Cart ({totals.totalItems})
           </Link>
           {session ? (
             <Link
               href="/account"
-              className="rounded-md px-3 py-2 text-slate-700 transition hover:bg-slate-100 hover:text-slate-950"
+              className="rounded-md px-3 py-2 text-emerald-800 transition duration-200 hover:bg-emerald-50 hover:text-emerald-950"
             >
               Account
             </Link>
@@ -91,7 +103,7 @@ function AuthAction({
   if (!isHydrated) {
     return (
       <span
-        className={`${visibilityClass} h-9 w-20 animate-pulse rounded-md bg-slate-100`}
+        className={`${visibilityClass} h-9 w-20 animate-pulse rounded-md bg-emerald-100`}
       />
     );
   }
@@ -100,7 +112,7 @@ function AuthAction({
     return (
       <Link
         href="/login"
-        className={`${visibilityClass} rounded-md bg-slate-950 px-3 py-2 text-sm font-medium text-white transition hover:bg-slate-800`}
+        className={`${visibilityClass} rounded-md bg-emerald-700 px-3 py-2 text-sm font-semibold text-white transition duration-200 hover:bg-emerald-800`}
       >
         Login
       </Link>
@@ -111,7 +123,7 @@ function AuthAction({
     <button
       type="button"
       onClick={onLogout}
-      className={`${visibilityClass} cursor-pointer rounded-md border border-slate-300 px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50`}
+      className={`${visibilityClass} cursor-pointer rounded-md border border-emerald-200 px-3 py-2 text-sm font-semibold text-emerald-800 transition duration-200 hover:bg-emerald-50`}
     >
       Logout
     </button>

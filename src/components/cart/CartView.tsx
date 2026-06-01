@@ -56,16 +56,16 @@ export function CartView() {
 
   if (items.length === 0) {
     return (
-      <div className="rounded-md border border-dashed border-slate-300 bg-white p-8 text-center">
-        <h2 className="text-base font-semibold text-slate-950">
+      <div className="rounded-md border border-dashed border-emerald-200 bg-white p-8 text-center">
+        <h2 className="text-base font-bold text-emerald-950">
           Your cart is empty
         </h2>
-        <p className="mt-2 text-sm text-slate-600">
+        <p className="mt-2 text-sm text-emerald-800/80">
           Add products from the catalog to prepare a checkout.
         </p>
         <Link
           href="/products"
-          className="mt-5 inline-flex h-10 items-center rounded-md bg-slate-950 px-4 text-sm font-medium text-white transition hover:bg-slate-800"
+          className="mt-5 inline-flex h-10 items-center rounded-md bg-orange-500 px-4 text-sm font-bold text-white transition duration-200 hover:bg-orange-600"
         >
           Browse products
         </Link>
@@ -93,8 +93,10 @@ export function CartView() {
         ))}
       </div>
 
-      <aside className="h-fit rounded-md border border-slate-200 bg-white p-5">
-        <h2 className="text-lg font-semibold tracking-tight">Cart summary</h2>
+      <aside className="h-fit rounded-md border border-emerald-100 bg-white p-5">
+        <h2 className="text-lg font-bold tracking-tight text-emerald-950">
+          Cart summary
+        </h2>
         <dl className="mt-4 space-y-3 text-sm">
           <SummaryRow label="Items" value={String(totals.totalItems)} />
           <SummaryRow label="Subtotal" value={formatCurrency(totals.subtotal)} />
@@ -102,7 +104,7 @@ export function CartView() {
             label="Discount"
             value={`-${formatCurrency(totals.discountTotal)}`}
           />
-          <div className="border-t border-slate-200 pt-3">
+          <div className="border-t border-emerald-100 pt-3">
             <SummaryRow
               label="Discounted total"
               value={formatCurrency(totals.discountedTotal)}
@@ -117,14 +119,14 @@ export function CartView() {
               type="button"
               onClick={handleCheckout}
               disabled={isCheckingOut}
-              className="h-11 w-full cursor-pointer rounded-md bg-slate-950 px-4 text-sm font-medium text-white transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:bg-slate-300"
+              className="h-11 w-full cursor-pointer rounded-md bg-orange-500 px-4 text-sm font-bold text-white transition duration-200 hover:bg-orange-600 disabled:cursor-not-allowed disabled:bg-emerald-200"
             >
               {isCheckingOut ? "Submitting checkout..." : "Checkout"}
             </button>
           ) : (
             <Link
               href="/login?next=/cart"
-              className="inline-flex h-11 w-full items-center justify-center rounded-md bg-slate-950 px-4 text-sm font-medium text-white transition hover:bg-slate-800"
+              className="inline-flex h-11 w-full items-center justify-center rounded-md bg-orange-500 px-4 text-sm font-bold text-white transition duration-200 hover:bg-orange-600"
             >
               Login to checkout
             </Link>
@@ -136,7 +138,7 @@ export function CartView() {
               setCheckoutResult(null);
               setCheckoutError(null);
             }}
-            className="h-10 w-full cursor-pointer rounded-md border border-slate-300 px-4 text-sm font-medium text-slate-700 transition hover:bg-slate-50"
+            className="h-10 w-full cursor-pointer rounded-md border border-emerald-200 px-4 text-sm font-semibold text-emerald-800 transition duration-200 hover:bg-emerald-50"
           >
             Clear cart
           </button>
@@ -148,7 +150,7 @@ export function CartView() {
           </div>
         ) : null}
 
-        <p className="mt-4 text-xs leading-5 text-slate-500">
+        <p className="mt-4 text-xs leading-5 text-emerald-800/60">
           DummyJSON checkout is simulated and does not create a permanent order
           or payment.
         </p>
@@ -178,7 +180,7 @@ function CheckoutResultSummary({
         <button
           type="button"
           onClick={onClose}
-          className="h-10 cursor-pointer rounded-md bg-emerald-800 px-4 text-sm font-medium text-white transition hover:bg-emerald-900"
+          className="h-10 cursor-pointer rounded-md bg-emerald-700 px-4 text-sm font-semibold text-white transition duration-200 hover:bg-emerald-800"
         >
           Close
         </button>
@@ -224,10 +226,10 @@ function CartItemRow({
   const lineSubtotal = item.price * item.quantity;
 
   return (
-    <article className="grid gap-4 rounded-md border border-slate-200 bg-white p-4 sm:grid-cols-[96px_1fr_auto]">
+    <article className="grid gap-4 rounded-md border border-emerald-100 bg-white p-4 sm:grid-cols-[96px_1fr_auto]">
       <Link
         href={`/products/${item.productId}`}
-        className="relative aspect-square overflow-hidden rounded-md bg-slate-100"
+        className="relative aspect-square overflow-hidden rounded-md bg-emerald-50"
       >
         {item.thumbnail ? (
           <Image
@@ -238,7 +240,7 @@ function CartItemRow({
             className="object-contain p-2"
           />
         ) : (
-          <div className="flex h-full items-center justify-center text-xs text-slate-500">
+          <div className="flex h-full items-center justify-center text-xs text-emerald-700">
             No image
           </div>
         )}
@@ -247,25 +249,25 @@ function CartItemRow({
       <div className="min-w-0 space-y-2">
         <Link
           href={`/products/${item.productId}`}
-          className="font-semibold text-slate-950 hover:underline"
+          className="font-bold text-emerald-950 hover:underline"
         >
           {item.title}
         </Link>
-        <p className="text-sm text-slate-600">
+        <p className="text-sm text-emerald-800/80">
           Unit price: {formatCurrency(item.price)}
         </p>
-        <p className="text-sm text-slate-600">
+        <p className="text-sm font-semibold text-emerald-900">
           Line total: {formatCurrency(lineSubtotal)}
         </p>
       </div>
 
       <div className="flex items-center gap-3 sm:flex-col sm:items-end">
-        <div className="flex items-center rounded-md border border-slate-300">
+        <div className="flex items-center rounded-md border border-emerald-200">
           <button
             type="button"
             onClick={() => onUpdateQuantity(item.productId, item.quantity - 1)}
             disabled={item.quantity <= 1}
-            className="h-9 w-9 cursor-pointer text-lg text-slate-700 transition hover:bg-slate-50 disabled:cursor-not-allowed disabled:text-slate-300"
+            className="h-9 w-9 cursor-pointer text-lg text-emerald-800 transition duration-200 hover:bg-emerald-50 disabled:cursor-not-allowed disabled:text-emerald-700/30"
             aria-label={`Decrease quantity for ${item.title}`}
           >
             -
@@ -282,12 +284,12 @@ function CartItemRow({
                 onUpdateQuantity(item.productId, nextQuantity);
               }
             }}
-            className="h-9 w-14 border-x border-slate-300 text-center text-sm outline-none"
+            className="h-9 w-14 border-x border-emerald-200 text-center text-sm text-emerald-950 outline-none"
           />
           <button
             type="button"
             onClick={() => onUpdateQuantity(item.productId, item.quantity + 1)}
-            className="h-9 w-9 cursor-pointer text-lg text-slate-700 transition hover:bg-slate-50"
+            className="h-9 w-9 cursor-pointer text-lg text-emerald-800 transition duration-200 hover:bg-emerald-50"
             aria-label={`Increase quantity for ${item.title}`}
           >
             +
@@ -297,7 +299,7 @@ function CartItemRow({
         <button
           type="button"
           onClick={() => onRemove(item.productId)}
-          className="cursor-pointer text-sm font-medium text-red-700 underline"
+          className="cursor-pointer text-sm font-semibold text-red-700 underline"
         >
           Remove
         </button>
@@ -317,10 +319,10 @@ function SummaryRow({
 }) {
   return (
     <div className="flex items-center justify-between gap-3">
-      <dt className={strong ? "font-semibold text-slate-950" : "text-slate-600"}>
+      <dt className={strong ? "font-bold text-emerald-950" : "text-emerald-800"}>
         {label}
       </dt>
-      <dd className={strong ? "font-semibold text-slate-950" : "text-slate-950"}>
+      <dd className={strong ? "font-bold text-emerald-950" : "text-emerald-950"}>
         {value}
       </dd>
     </div>

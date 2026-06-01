@@ -1,0 +1,324 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - link "MC Mini Commerce" [ref=e6] [cursor=pointer]:
+          - /url: /products
+          - generic [ref=e7]: MC
+          - generic [ref=e8]: Mini Commerce
+        - search [ref=e9]:
+          - generic [ref=e10]: Search products
+          - searchbox "Search products" [ref=e11]
+        - navigation [ref=e12]:
+          - link "Products" [ref=e13] [cursor=pointer]:
+            - /url: /products
+          - link "Posts" [ref=e14] [cursor=pointer]:
+            - /url: /posts
+          - link "Cart (0)" [ref=e15] [cursor=pointer]:
+            - /url: /cart
+          - link "Login" [ref=e16] [cursor=pointer]:
+            - /url: /login
+    - main [ref=e17]:
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - generic [ref=e20]:
+            - paragraph [ref=e21]: Products
+            - heading "Shop curated daily deals" [level=1] [ref=e22]
+            - paragraph [ref=e23]: Search, filter, and sort the catalog with prices, ratings, stock, and discount signals visible before you open a product.
+          - paragraph [ref=e24]: Showing 12 of 194
+        - generic [ref=e25]:
+          - generic [ref=e26]:
+            - generic [ref=e27]:
+              - text: Search
+              - searchbox "Search" [ref=e29]
+            - generic [ref=e30]:
+              - text: Sort
+              - combobox "Sort" [ref=e32] [cursor=pointer]:
+                - option "Recommended" [selected]
+                - option "Title A-Z"
+                - option "Title Z-A"
+                - option "Price low to high"
+                - option "Price high to low"
+                - option "Rating high to low"
+          - generic [ref=e33]:
+            - paragraph [ref=e34]: Category
+            - generic [ref=e35]:
+              - link "All" [ref=e36] [cursor=pointer]:
+                - /url: /products
+              - link "Beauty" [ref=e37] [cursor=pointer]:
+                - /url: /products?category=beauty
+              - link "Fragrances" [ref=e38] [cursor=pointer]:
+                - /url: /products?category=fragrances
+              - link "Furniture" [ref=e39] [cursor=pointer]:
+                - /url: /products?category=furniture
+              - link "Groceries" [ref=e40] [cursor=pointer]:
+                - /url: /products?category=groceries
+              - link "Home Decoration" [ref=e41] [cursor=pointer]:
+                - /url: /products?category=home-decoration
+              - link "Kitchen Accessories" [ref=e42] [cursor=pointer]:
+                - /url: /products?category=kitchen-accessories
+              - link "Laptops" [ref=e43] [cursor=pointer]:
+                - /url: /products?category=laptops
+              - link "Mens Shirts" [ref=e44] [cursor=pointer]:
+                - /url: /products?category=mens-shirts
+              - link "Mens Shoes" [ref=e45] [cursor=pointer]:
+                - /url: /products?category=mens-shoes
+              - link "Mens Watches" [ref=e46] [cursor=pointer]:
+                - /url: /products?category=mens-watches
+              - link "Mobile Accessories" [ref=e47] [cursor=pointer]:
+                - /url: /products?category=mobile-accessories
+              - link "Motorcycle" [ref=e48] [cursor=pointer]:
+                - /url: /products?category=motorcycle
+              - link "Skin Care" [ref=e49] [cursor=pointer]:
+                - /url: /products?category=skin-care
+              - link "Smartphones" [ref=e50] [cursor=pointer]:
+                - /url: /products?category=smartphones
+              - link "Sports Accessories" [ref=e51] [cursor=pointer]:
+                - /url: /products?category=sports-accessories
+              - link "Sunglasses" [ref=e52] [cursor=pointer]:
+                - /url: /products?category=sunglasses
+              - link "Tablets" [ref=e53] [cursor=pointer]:
+                - /url: /products?category=tablets
+              - link "Tops" [ref=e54] [cursor=pointer]:
+                - /url: /products?category=tops
+              - link "Vehicle" [ref=e55] [cursor=pointer]:
+                - /url: /products?category=vehicle
+              - link "Womens Bags" [ref=e56] [cursor=pointer]:
+                - /url: /products?category=womens-bags
+              - link "Womens Dresses" [ref=e57] [cursor=pointer]:
+                - /url: /products?category=womens-dresses
+              - link "Womens Jewellery" [ref=e58] [cursor=pointer]:
+                - /url: /products?category=womens-jewellery
+              - link "Womens Shoes" [ref=e59] [cursor=pointer]:
+                - /url: /products?category=womens-shoes
+              - link "Womens Watches" [ref=e60] [cursor=pointer]:
+                - /url: /products?category=womens-watches
+          - generic [ref=e62]:
+            - text: "Viewing:"
+            - strong [ref=e63]: All items
+        - generic [ref=e64]:
+          - article [ref=e65]:
+            - link "Essence Mascara Lash Princess 10.5% off" [ref=e66] [cursor=pointer]:
+              - /url: /products/1
+              - img "Essence Mascara Lash Princess" [ref=e67]
+              - generic [ref=e68]: 10.5% off
+            - generic [ref=e69]:
+              - generic [ref=e70]:
+                - paragraph [ref=e71]: beauty
+                - link "Essence Mascara Lash Princess" [ref=e72] [cursor=pointer]:
+                  - /url: /products/1
+              - generic [ref=e73]:
+                - generic [ref=e74]:
+                  - paragraph [ref=e75]: $8.94
+                  - paragraph [ref=e76]: $9.99
+                - generic [ref=e77]:
+                  - paragraph [ref=e78]: Rating 2.6
+                  - paragraph [ref=e79]: In Stock
+              - button "Add to cart" [ref=e80] [cursor=pointer]
+          - article [ref=e81]:
+            - link "Eyeshadow Palette with Mirror 18.2% off" [ref=e82] [cursor=pointer]:
+              - /url: /products/2
+              - img "Eyeshadow Palette with Mirror" [ref=e83]
+              - generic [ref=e84]: 18.2% off
+            - generic [ref=e85]:
+              - generic [ref=e86]:
+                - paragraph [ref=e87]: beauty
+                - link "Eyeshadow Palette with Mirror" [ref=e88] [cursor=pointer]:
+                  - /url: /products/2
+              - generic [ref=e89]:
+                - generic [ref=e90]:
+                  - paragraph [ref=e91]: $16.35
+                  - paragraph [ref=e92]: $19.99
+                - generic [ref=e93]:
+                  - paragraph [ref=e94]: Rating 2.9
+                  - paragraph [ref=e95]: In Stock
+              - button "Add to cart" [ref=e96] [cursor=pointer]
+          - article [ref=e97]:
+            - link "Powder Canister 9.8% off" [ref=e98] [cursor=pointer]:
+              - /url: /products/3
+              - img "Powder Canister" [ref=e99]
+              - generic [ref=e100]: 9.8% off
+            - generic [ref=e101]:
+              - generic [ref=e102]:
+                - paragraph [ref=e103]: beauty
+                - link "Powder Canister" [ref=e104] [cursor=pointer]:
+                  - /url: /products/3
+              - generic [ref=e105]:
+                - generic [ref=e106]:
+                  - paragraph [ref=e107]: $13.51
+                  - paragraph [ref=e108]: $14.99
+                - generic [ref=e109]:
+                  - paragraph [ref=e110]: Rating 4.6
+                  - paragraph [ref=e111]: In Stock
+              - button "Add to cart" [ref=e112] [cursor=pointer]
+          - article [ref=e113]:
+            - link "Red Lipstick 12.2% off" [ref=e114] [cursor=pointer]:
+              - /url: /products/4
+              - img "Red Lipstick" [ref=e115]
+              - generic [ref=e116]: 12.2% off
+            - generic [ref=e117]:
+              - generic [ref=e118]:
+                - paragraph [ref=e119]: beauty
+                - link "Red Lipstick" [ref=e120] [cursor=pointer]:
+                  - /url: /products/4
+              - generic [ref=e121]:
+                - generic [ref=e122]:
+                  - paragraph [ref=e123]: $11.41
+                  - paragraph [ref=e124]: $12.99
+                - generic [ref=e125]:
+                  - paragraph [ref=e126]: Rating 4.4
+                  - paragraph [ref=e127]: In Stock
+              - button "Add to cart" [ref=e128] [cursor=pointer]
+          - article [ref=e129]:
+            - link "Red Nail Polish 11.4% off" [ref=e130] [cursor=pointer]:
+              - /url: /products/5
+              - img "Red Nail Polish" [ref=e131]
+              - generic [ref=e132]: 11.4% off
+            - generic [ref=e133]:
+              - generic [ref=e134]:
+                - paragraph [ref=e135]: beauty
+                - link "Red Nail Polish" [ref=e136] [cursor=pointer]:
+                  - /url: /products/5
+              - generic [ref=e137]:
+                - generic [ref=e138]:
+                  - paragraph [ref=e139]: $7.96
+                  - paragraph [ref=e140]: $8.99
+                - generic [ref=e141]:
+                  - paragraph [ref=e142]: Rating 4.3
+                  - paragraph [ref=e143]: In Stock
+              - button "Add to cart" [ref=e144] [cursor=pointer]
+          - article [ref=e145]:
+            - link "Calvin Klein CK One 1.9% off" [ref=e146] [cursor=pointer]:
+              - /url: /products/6
+              - img "Calvin Klein CK One" [ref=e147]
+              - generic [ref=e148]: 1.9% off
+            - generic [ref=e149]:
+              - generic [ref=e150]:
+                - paragraph [ref=e151]: fragrances
+                - link "Calvin Klein CK One" [ref=e152] [cursor=pointer]:
+                  - /url: /products/6
+              - generic [ref=e153]:
+                - generic [ref=e154]:
+                  - paragraph [ref=e155]: $49.05
+                  - paragraph [ref=e156]: $49.99
+                - generic [ref=e157]:
+                  - paragraph [ref=e158]: Rating 4.4
+                  - paragraph [ref=e159]: In Stock
+              - button "Add to cart" [ref=e160] [cursor=pointer]
+          - article [ref=e161]:
+            - link "Chanel Coco Noir Eau De 16.5% off" [ref=e162] [cursor=pointer]:
+              - /url: /products/7
+              - img "Chanel Coco Noir Eau De" [ref=e163]
+              - generic [ref=e164]: 16.5% off
+            - generic [ref=e165]:
+              - generic [ref=e166]:
+                - paragraph [ref=e167]: fragrances
+                - link "Chanel Coco Noir Eau De" [ref=e168] [cursor=pointer]:
+                  - /url: /products/7
+              - generic [ref=e169]:
+                - generic [ref=e170]:
+                  - paragraph [ref=e171]: $108.53
+                  - paragraph [ref=e172]: $129.99
+                - generic [ref=e173]:
+                  - paragraph [ref=e174]: Rating 4.3
+                  - paragraph [ref=e175]: In Stock
+              - button "Add to cart" [ref=e176] [cursor=pointer]
+          - article [ref=e177]:
+            - link "Dior J'adore 14.7% off" [ref=e178] [cursor=pointer]:
+              - /url: /products/8
+              - img "Dior J'adore" [ref=e179]
+              - generic [ref=e180]: 14.7% off
+            - generic [ref=e181]:
+              - generic [ref=e182]:
+                - paragraph [ref=e183]: fragrances
+                - link "Dior J'adore" [ref=e184] [cursor=pointer]:
+                  - /url: /products/8
+              - generic [ref=e185]:
+                - generic [ref=e186]:
+                  - paragraph [ref=e187]: $76.74
+                  - paragraph [ref=e188]: $89.99
+                - generic [ref=e189]:
+                  - paragraph [ref=e190]: Rating 3.8
+                  - paragraph [ref=e191]: In Stock
+              - button "Add to cart" [ref=e192] [cursor=pointer]
+          - article [ref=e193]:
+            - link "Dolce Shine Eau de 0.6% off" [ref=e194] [cursor=pointer]:
+              - /url: /products/9
+              - img "Dolce Shine Eau de" [ref=e195]
+              - generic [ref=e196]: 0.6% off
+            - generic [ref=e197]:
+              - generic [ref=e198]:
+                - paragraph [ref=e199]: fragrances
+                - link "Dolce Shine Eau de" [ref=e200] [cursor=pointer]:
+                  - /url: /products/9
+              - generic [ref=e201]:
+                - generic [ref=e202]:
+                  - paragraph [ref=e203]: $69.56
+                  - paragraph [ref=e204]: $69.99
+                - generic [ref=e205]:
+                  - paragraph [ref=e206]: Rating 4.0
+                  - paragraph [ref=e207]: Low Stock
+              - button "Add to cart" [ref=e208] [cursor=pointer]
+          - article [ref=e209]:
+            - link "Gucci Bloom Eau de 14.4% off" [ref=e210] [cursor=pointer]:
+              - /url: /products/10
+              - img "Gucci Bloom Eau de" [ref=e211]
+              - generic [ref=e212]: 14.4% off
+            - generic [ref=e213]:
+              - generic [ref=e214]:
+                - paragraph [ref=e215]: fragrances
+                - link "Gucci Bloom Eau de" [ref=e216] [cursor=pointer]:
+                  - /url: /products/10
+              - generic [ref=e217]:
+                - generic [ref=e218]:
+                  - paragraph [ref=e219]: $68.48
+                  - paragraph [ref=e220]: $79.99
+                - generic [ref=e221]:
+                  - paragraph [ref=e222]: Rating 2.7
+                  - paragraph [ref=e223]: In Stock
+              - button "Add to cart" [ref=e224] [cursor=pointer]
+          - article [ref=e225]:
+            - link "Annibale Colombo Bed 8.6% off" [ref=e226] [cursor=pointer]:
+              - /url: /products/11
+              - img "Annibale Colombo Bed" [ref=e227]
+              - generic [ref=e228]: 8.6% off
+            - generic [ref=e229]:
+              - generic [ref=e230]:
+                - paragraph [ref=e231]: furniture
+                - link "Annibale Colombo Bed" [ref=e232] [cursor=pointer]:
+                  - /url: /products/11
+              - generic [ref=e233]:
+                - generic [ref=e234]:
+                  - paragraph [ref=e235]: $1,737.16
+                  - paragraph [ref=e236]: $1,899.99
+                - generic [ref=e237]:
+                  - paragraph [ref=e238]: Rating 4.8
+                  - paragraph [ref=e239]: In Stock
+              - button "Add to cart" [ref=e240] [cursor=pointer]
+          - article [ref=e241]:
+            - link "Annibale Colombo Sofa 14.4% off" [ref=e242] [cursor=pointer]:
+              - /url: /products/12
+              - img "Annibale Colombo Sofa" [ref=e243]
+              - generic [ref=e244]: 14.4% off
+            - generic [ref=e245]:
+              - generic [ref=e246]:
+                - paragraph [ref=e247]: furniture
+                - link "Annibale Colombo Sofa" [ref=e248] [cursor=pointer]:
+                  - /url: /products/12
+              - generic [ref=e249]:
+                - generic [ref=e250]:
+                  - paragraph [ref=e251]: $2,139.99
+                  - paragraph [ref=e252]: $2,499.99
+                - generic [ref=e253]:
+                  - paragraph [ref=e254]: Rating 3.9
+                  - paragraph [ref=e255]: In Stock
+              - button "Add to cart" [ref=e256] [cursor=pointer]
+        - navigation "Product pagination" [ref=e257]:
+          - paragraph [ref=e258]: Page 1 of 17
+          - generic [ref=e259]:
+            - generic [ref=e260]: Previous
+            - link "Next" [ref=e261] [cursor=pointer]:
+              - /url: /products?page=2
+  - button "Open Next.js Dev Tools" [ref=e267] [cursor=pointer]:
+    - img [ref=e268]
+  - alert [ref=e271]

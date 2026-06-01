@@ -69,7 +69,7 @@ export function AccountProfile() {
 
   if (!isHydrated || (!session && !error)) {
     return (
-      <div className="rounded-md border border-slate-200 bg-white p-6 text-sm text-slate-600">
+      <div className="rounded-md border border-emerald-100 bg-white p-6 text-sm font-semibold text-emerald-800">
         Checking session...
       </div>
     );
@@ -92,15 +92,15 @@ export function AccountProfile() {
 
   if (!profile) {
     return (
-      <div className="rounded-md border border-slate-200 bg-white p-6 text-sm text-slate-600">
+      <div className="rounded-md border border-emerald-100 bg-white p-6 text-sm font-semibold text-emerald-800">
         Loading profile...
       </div>
     );
   }
 
   return (
-    <div className="grid gap-4 rounded-md border border-slate-200 bg-white p-6 sm:grid-cols-[auto_1fr] sm:items-center">
-      <div className="relative h-24 w-24 overflow-hidden rounded-md bg-slate-100">
+    <div className="grid gap-4 rounded-md border border-emerald-100 bg-white p-6 sm:grid-cols-[auto_1fr] sm:items-center">
+      <div className="relative h-24 w-24 overflow-hidden rounded-md bg-emerald-50">
         {profile.image ? (
           <Image
             src={profile.image}
@@ -110,7 +110,7 @@ export function AccountProfile() {
             className="object-cover"
           />
         ) : (
-          <div className="flex h-full items-center justify-center text-sm text-slate-500">
+          <div className="flex h-full items-center justify-center text-sm text-emerald-700">
             No avatar
           </div>
         )}
@@ -118,10 +118,10 @@ export function AccountProfile() {
 
       <div className="space-y-4">
         <div>
-          <h2 className="text-2xl font-semibold tracking-tight text-slate-950">
+          <h2 className="text-2xl font-bold tracking-tight text-emerald-950">
             {profile.firstName} {profile.lastName}
           </h2>
-          <p className="text-sm text-slate-600">{profile.email}</p>
+          <p className="text-sm text-emerald-800/80">{profile.email}</p>
         </div>
 
         <dl className="grid gap-3 text-sm sm:grid-cols-3">
@@ -137,12 +137,12 @@ export function AccountProfile() {
               logout();
               router.push("/login");
             }}
-            className="h-10 cursor-pointer rounded-md border border-slate-300 px-4 text-sm font-medium text-slate-700 transition hover:bg-slate-50"
+            className="h-10 cursor-pointer rounded-md border border-emerald-200 px-4 text-sm font-semibold text-emerald-800 transition duration-200 hover:bg-emerald-50"
           >
             Logout
           </button>
           {isLoading ? (
-            <p className="text-sm text-slate-500">Refreshing profile...</p>
+            <p className="text-sm text-emerald-700">Refreshing profile...</p>
           ) : null}
         </div>
       </div>
@@ -153,8 +153,8 @@ export function AccountProfile() {
 function ProfileField({ label, value }: { label: string; value: string }) {
   return (
     <div>
-      <dt className="font-medium text-slate-500">{label}</dt>
-      <dd className="mt-1 text-slate-950">{value}</dd>
+      <dt className="font-semibold text-emerald-700">{label}</dt>
+      <dd className="mt-1 text-emerald-950">{value}</dd>
     </div>
   );
 }

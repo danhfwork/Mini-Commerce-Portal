@@ -12,11 +12,14 @@ export function ProductCard({ product }: ProductCardProps) {
   const stockLabel =
     product.availabilityStatus ?? (product.stock > 0 ? "In stock" : "Out of stock");
 
+  const discountedPrice =
+    product.price * (1 - product.discountPercentage / 100);
+
   return (
-    <article className="flex h-full flex-col overflow-hidden rounded-md border border-slate-200 bg-white">
+    <article className="flex h-full flex-col overflow-hidden rounded-md border border-emerald-100 bg-white transition duration-200 hover:border-emerald-300">
       <Link
         href={`/products/${product.id}`}
-        className="relative block aspect-[4/3] bg-slate-100"
+        className="relative block aspect-[4/3] bg-emerald-50"
       >
         {product.thumbnail ? (
           <Image
@@ -27,41 +30,46 @@ export function ProductCard({ product }: ProductCardProps) {
             className="object-contain p-4"
           />
         ) : (
-          <div className="flex h-full items-center justify-center text-sm text-slate-500">
+          <div className="flex h-full items-center justify-center text-sm text-emerald-700">
             No image
           </div>
         )}
+        <span className="absolute left-3 top-3 rounded-md bg-orange-500 px-2 py-1 text-xs font-bold text-white">
+          {formatPercent(product.discountPercentage)} off
+        </span>
       </Link>
 
-      <div className="flex flex-1 flex-col gap-3 p-4">
+      <div className="flex flex-1 flex-col gap-4 p-4">
         <div className="space-y-1">
-          <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
+          <p className="text-xs font-bold uppercase text-emerald-700">
             {product.category}
           </p>
           <Link
             href={`/products/${product.id}`}
-            className="line-clamp-2 text-base font-semibold text-slate-950 hover:underline"
+            className="line-clamp-2 text-base font-bold text-emerald-950 transition duration-200 hover:text-emerald-700"
           >
             {product.title}
           </Link>
         </div>
 
-        <div className="grid grid-cols-2 gap-2 text-sm text-slate-600">
+        <div className="grid grid-cols-2 gap-2 text-sm text-emerald-800/80">
           <div>
-            <p className="font-semibold text-slate-950">
-              {formatCurrency(product.price)}
+            <p className="text-lg font-extrabold text-emerald-950">
+              {formatCurrency(discountedPrice)}
             </p>
-            <p>{formatPercent(product.discountPercentage)} off</p>
+            <p className="text-xs line-through">{formatCurrency(product.price)}</p>
           </div>
           <div className="text-right">
-            <p>Rating {product.rating.toFixed(1)}</p>
-            <p>{stockLabel}</p>
+            <p className="font-semibold text-emerald-900">
+              Rating {product.rating.toFixed(1)}
+            </p>
+            <p className="text-xs">{stockLabel}</p>
           </div>
         </div>
 
         <AddToCartButton
           product={product}
-          className="mt-auto inline-flex h-10 cursor-pointer items-center justify-center rounded-md bg-slate-950 px-3 text-sm font-medium text-white transition hover:bg-slate-800"
+          className="mt-auto inline-flex h-11 cursor-pointer items-center justify-center rounded-md bg-orange-500 px-3 text-sm font-bold text-white transition duration-200 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-200"
         />
       </div>
     </article>

@@ -68,7 +68,7 @@ export function LoginForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="space-y-4 rounded-md border border-slate-200 bg-white p-6"
+      className="space-y-4 rounded-md border border-emerald-100 bg-white p-6"
     >
       {session ? (
         <div className="rounded-md bg-emerald-50 p-3 text-sm text-emerald-800">
@@ -77,7 +77,7 @@ export function LoginForm() {
       ) : null}
 
       <div>
-        <label htmlFor="username" className="text-sm font-medium text-slate-700">
+        <label htmlFor="username" className="text-sm font-semibold text-emerald-900">
           Username
         </label>
         <input
@@ -86,12 +86,12 @@ export function LoginForm() {
           value={username}
           onChange={(event) => setUsername(event.target.value)}
           autoComplete="username"
-          className="mt-2 h-10 w-full rounded-md border border-slate-300 px-3 text-sm outline-none transition focus:border-slate-500 focus:ring-2 focus:ring-slate-200"
+          className="mt-2 h-10 w-full rounded-md border border-emerald-200 px-3 text-sm text-emerald-950 outline-none transition duration-200 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-100"
         />
       </div>
 
       <div>
-        <label htmlFor="password" className="text-sm font-medium text-slate-700">
+        <label htmlFor="password" className="text-sm font-semibold text-emerald-900">
           Password
         </label>
         <input
@@ -101,7 +101,7 @@ export function LoginForm() {
           value={password}
           onChange={(event) => setPassword(event.target.value)}
           autoComplete="current-password"
-          className="mt-2 h-10 w-full rounded-md border border-slate-300 px-3 text-sm outline-none transition focus:border-slate-500 focus:ring-2 focus:ring-slate-200"
+          className="mt-2 h-10 w-full rounded-md border border-emerald-200 px-3 text-sm text-emerald-950 outline-none transition duration-200 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-100"
         />
       </div>
 
@@ -115,7 +115,7 @@ export function LoginForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="h-10 cursor-pointer rounded-md bg-slate-950 px-4 text-sm font-medium text-white transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:bg-slate-300"
+          className="h-10 cursor-pointer rounded-md bg-emerald-700 px-4 text-sm font-semibold text-white transition duration-200 hover:bg-emerald-800 disabled:cursor-not-allowed disabled:bg-emerald-200"
         >
           {isSubmitting ? "Logging in..." : "Login"}
         </button>
@@ -123,7 +123,7 @@ export function LoginForm() {
           type="button"
           onClick={fillTestCredentials}
           disabled={isSubmitting}
-          className="h-10 cursor-pointer rounded-md border border-slate-300 px-4 text-sm font-medium text-slate-700 transition hover:bg-slate-50 disabled:cursor-not-allowed disabled:text-slate-400"
+          className="h-10 cursor-pointer rounded-md border border-emerald-200 px-4 text-sm font-semibold text-emerald-800 transition duration-200 hover:bg-emerald-50 disabled:cursor-not-allowed disabled:text-emerald-700/40"
         >
           Fill test credentials
         </button>

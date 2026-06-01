@@ -76,16 +76,22 @@ async function ProductsContent({
         : { sort: sort.value };
 
   return (
-    <section className="space-y-4">
-      <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+    <section className="space-y-6">
+      <div className="flex flex-col gap-4 rounded-md border border-emerald-100 bg-white p-5 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <p className="text-sm font-medium text-slate-500">Products</p>
-          <h1 className="text-3xl font-semibold tracking-tight">
-            Browse products
+          <p className="text-sm font-bold uppercase text-emerald-700">
+            Products
+          </p>
+          <h1 className="mt-1 text-3xl font-extrabold tracking-tight text-emerald-950">
+            Shop curated daily deals
           </h1>
+          <p className="mt-2 max-w-2xl text-sm leading-6 text-emerald-800/80">
+            Search, filter, and sort the catalog with prices, ratings, stock,
+            and discount signals visible before you open a product.
+          </p>
         </div>
-        <p className="text-sm text-slate-600">
-          Showing {productList.products.length} of {productList.total} products
+        <p className="rounded-md bg-emerald-50 px-3 py-2 text-sm font-semibold text-emerald-800">
+          Showing {productList.products.length} of {productList.total}
         </p>
       </div>
 

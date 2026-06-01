@@ -26,7 +26,7 @@ export function AddToCartButton({
       type="button"
       className={
         className ??
-        "h-10 cursor-pointer rounded-md bg-slate-950 px-3 text-sm font-medium text-white transition hover:bg-slate-800"
+        "h-10 cursor-pointer rounded-md bg-orange-500 px-3 text-sm font-bold text-white transition duration-200 hover:bg-orange-600"
       }
       onClick={() => {
         const cartItem = {

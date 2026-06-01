@@ -1,4 +1,5 @@
 export const PRODUCTS_PER_PAGE = 12;
+export const POSTS_PER_PAGE = 9;
 
 export function getSkipForPage(page: number, limit = PRODUCTS_PER_PAGE) {
   return (Math.max(page, 1) - 1) * limit;
